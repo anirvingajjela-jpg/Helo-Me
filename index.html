@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Roots | [Insert Name] </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>[Community/Chapter Name]</h1>
+            <ul>
+                <li><a href="#history">History</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#stories">Stories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Our Heritage, Our Home</h2>
+            <p>Exploring the events and people that shaped [Community Name].</p>
+        </div>
+    </section>
+
+    <section id="history">
+        <h3>The Heart of the Community</h3>
+        <p>This is where you describe the origins of your town or school chapter. Mention the founding year and the primary industry or event that brought people together.</p>
+    </section>
+
+    <section id="timeline">
+        <h3>Interactive History</h3>
+        <div class="timeline-container">
+            <div class="timeline-nav">
+                <button onclick="showEvent('1920')">1920s</button>
+                <button onclick="showEvent('1950')">1950s</button>
+                <button onclick="showEvent('1980')">1980s</button>
+                <button onclick="showEvent('Today')">Today</button>
+            </div>
+            <div id="event-display" class="event-card">
+                <p>Click a year above to explore our milestones.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TSA National Conference Entry | [Chapter/School Name]</p>
+    </footer>
+
+    <script>
+        function showEvent(year) {
+            const display = document.getElementById('event-display');
+            const events = {
+                '1920': '<strong>The Founding:</strong> [Community Name] was established as a hub for local agriculture.',
+                '1950': '<strong>The Industrial Boom:</strong> The arrival of the railroad transformed the local economy.',
+                '1980': '<strong>Modernization:</strong> The community center was built, becoming the heart of local events.',
+                'Today': '<strong>The Legacy:</strong> Today, our TSA Chapter continues the tradition of innovation.'
+            };
+            display.innerHTML = events[year];
+        }
+    </script>
+</body>
+</html>
