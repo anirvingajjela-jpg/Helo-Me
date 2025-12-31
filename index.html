@@ -12,8 +12,8 @@
         <nav>
             <div class="logo"><strong>[Community Name]</strong> Connect</div>
             <ul>
-                <li><a href="#about">Our Mission</a></li>
-                <li><a href="#hub">Community Hub</a></li>
+                <li><a href="#hub">Resources</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Get Involved</a></li>
             </ul>
         </nav>
@@ -21,6 +21,7 @@
 
     <section id="hero">
         <div class="hero-content">
+            <div class="image-placeholder"> [Insert Main Community Photo Here] </div>
             <h2>Growing Together</h2>
             <p>Your central guide to youth volunteering, local libraries, and community growth.</p>
         </div>
@@ -45,9 +46,17 @@
         </div>
     </section>
 
+    <section id="gallery">
+        <h3>Community Snapshots</h3>
+        <div class="gallery-grid">
+            <div class="photo-box"> [Insert Photo: Local Library] </div>
+            <div class="photo-box"> [Insert Photo: Volunteer Event] </div>
+            <div class="photo-box"> [Insert Photo: Community Landmark] </div>
+        </div>
+    </section>
+
     <footer>
         <p><strong>[TSA Chapter Name]</strong> | 2026 National TSA Conference Entry</p>
-        <p>Building a stronger community through technology.</p>
     </footer>
 
     <script>
@@ -58,17 +67,17 @@
             ],
             library: [
                 { title: "Central Library", desc: "Free Wi-Fi, 3D printing labs, and quiet study zones." },
-                { title: "Community Book Box", desc: "Take a book, leave a book! Located at Main St. Park." }
+                { title: "Community Book Store", desc: "Support local literacy programs." }
             ],
             events: [
-                { title: "Farmers Market", desc: "Every Saturday morning. Support local growers!" },
-                { title: "TSA Showcase", desc: "Come see our chapter's latest engineering projects." }
+                { title: "Farmers Market", desc: "Every Saturday morning at the town square." },
+                { title: "Town Hall Social", desc: "Meet your local representatives and neighbors." }
             ]
         };
 
         function filterContent(category) {
             const grid = document.getElementById('resource-grid');
-            grid.innerHTML = ''; // Clear current content
+            grid.innerHTML = ''; 
 
             data[category].forEach(item => {
                 const card = document.createElement('div');
